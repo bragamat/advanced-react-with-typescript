@@ -4,6 +4,8 @@ const classNamesMap = {
   success: "bg-green-500 text-white",
 };
 
+type ButtonVariantsProp = keyof typeof classNamesMap
+
 type ButtonProps = {
   /**
    * This isn't ideal - we have to manually sync
@@ -14,7 +16,7 @@ type ButtonProps = {
    *
    * Hint: you'll need 'typeof' and 'keyof'.
    */
-  variant: "primary" | "secondary" | "success";
+  variant: ButtonVariantsProp;
 };
 
 export const Button = (props: ButtonProps) => {
